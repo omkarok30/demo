@@ -1,0 +1,1052 @@
+import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
+export const todoLookUps = create(
+  devtools((_set: any, _get: any) => ({
+    yesNo: [
+      { value: 'true', label: 'Yes' },
+      { value: 'false', label: 'No' },
+    ],
+    examinationPattern: [
+      { value: 'annual', label: 'Annual' },
+      { value: 'semester', label: 'Semester' },
+      { value: 'trimester', label: 'Trimester' },
+    ],
+    affiliationType: [
+      { value: 'tier2', label: 'Tier II' },
+      { value: 'tier1board', label: 'Tier I (University/Board Affiliated)' },
+      { value: 'tier1ind', label: 'Tier I (Independent)' },
+    ],
+    programDuration: [
+      { value: '1', label: '1' },
+      { value: '2', label: '2' },
+      { value: '3', label: '3' },
+      { value: '4', label: '4' },
+      { value: '5', label: '5' },
+      { value: '6', label: '6' },
+    ],
+    salutation: [
+      { value: 'mr', label: 'MR.' },
+      { value: 'miss', label: 'MISS.' },
+      { value: 'ms', label: 'MS.' },
+      { value: 'mrs', label: 'MRS.' },
+      { value: 'prof', label: 'PROF.' },
+      { value: 'dr', label: 'DR.' },
+      { value: 'prof_dr', label: 'PROF.DR.' },
+    ],
+    gender: [
+      { value: 'male', label: 'Male' },
+      { value: 'female', label: 'Female' },
+    ],
+    className: [
+      { value: 'first', label: 'First Year' },
+      { value: 'second', label: 'Second Year' },
+      { value: 'third', label: 'Third Year' },
+      { value: 'fourth', label: 'Fourth Year' },
+      { value: 'fifth', label: 'Fifth Year' },
+      { value: 'sixth', label: 'Sixth Year' },
+    ],
+    bloodGroup: [
+      { value: 'notknown', label: 'Not Known' },
+      { value: 'O-', label: 'O-' },
+      { value: 'O+', label: 'O+' },
+      { value: 'A-', label: 'A-' },
+      { value: 'A+', label: 'A+' },
+      { value: 'B-', label: 'B-' },
+      { value: 'B+', label: 'B+' },
+      { value: 'AB-', label: 'AB-' },
+      { value: 'AB+', label: 'AB+' },
+    ],
+    maritalStatus: [
+      { value: 'married', label: 'Married' },
+      { value: 'unmarried', label: 'Unmarried' },
+      { value: 'divorced', label: 'DIVORCED' },
+      { value: 'widow/widower', label: 'WIDOW/WIDOWER' },
+    ],
+    religion: [
+      { value: 'hindu', label: 'HINDU' },
+      { value: 'islam', label: 'ISLAM' },
+      { value: 'christain', label: 'CHRISTAIN' },
+      { value: 'jain', label: 'JAIN' },
+      { value: 'sikh', label: 'SIKH' },
+      { value: 'buddhist', label: 'BUDDHIST' },
+      { value: 'musalman', label: 'MUSALMAN' },
+      { value: 'muslim', label: 'MUSLIM' },
+      { value: 'shikalgar', label: 'MUSLIM SHIKALGAR' },
+      { value: 'navboudha', label: 'NAVBOUDHA' },
+      { value: 'na', label: 'NA' },
+    ],
+    caste: [
+      {
+        hindu: [
+          { value: 'aaryakomti', label: 'AARYA VAISHYA KOMATI' },
+          { value: 'beldar', label: 'BELDAR' },
+        ],
+      },
+      {
+        christain: [{ value: 'adidravidar', label: 'ADI DRAVIDAR' }],
+      },
+    ],
+    motherTongue: [
+      { value: 'marathi', label: 'MARATHI' },
+      { value: 'hindi', label: 'HINDI' },
+      { value: 'bendali', label: 'BENGALI' },
+      { value: 'telugu', label: 'TELUGU' },
+      { value: 'tamil', label: 'TAMIL' },
+      { value: 'gujarati', label: 'GUJARATI' },
+      { value: 'kannada', label: 'KANNADA' },
+      { value: 'malayalam', label: 'MALAYALAM' },
+      { value: 'odia', label: 'ODIA' },
+      { value: 'punjabi', label: 'PUNJABI' },
+      { value: 'assamese', label: 'ASSAMESE' },
+      { value: 'maithli', label: 'MAITHILI' },
+      { value: 'bhili', label: 'BHILI/BHILODI' },
+      { value: 'santali', label: 'SANTALI' },
+      { value: 'kashmiri', label: 'KASHMIRI' },
+      { value: 'nepali', label: 'NEPALI' },
+      { value: 'gindhi', label: 'GONDI' },
+      { value: 'sindhi', label: 'SINDHI' },
+      { value: 'konkani', label: 'KONKANI' },
+      { value: 'dorgi', label: 'DORGI' },
+      { value: 'khandeshi', label: 'KHANDESHI' },
+      { value: 'kurukh', label: 'KURUKH' },
+      { value: 'tulu', label: 'TULU' },
+      { value: 'meitei', label: 'MEITEI/MANIPURI' },
+      { value: 'bodo', label: 'BODO' },
+      { value: 'khasi', label: 'KHASI' },
+      { value: 'urdu', label: 'URDU' },
+      { value: 'ho', label: 'HO' },
+      { value: 'garo', label: 'GARO' },
+      { value: 'tripuri', label: 'TRIPURI' },
+    ],
+    qualification: [
+      { value: 'X', label: 'X' },
+      { value: 'XII', label: 'XII' },
+      { value: 'vocational', label: 'Vocational' },
+      { value: 'iti', label: 'ITI' },
+      { value: 'mcvc', label: 'MCVC' },
+      { value: 'bifocal', label: 'Bifocal' },
+      { value: 'diploma', label: 'Diploma' },
+      { value: 'UG', label: 'UG' },
+    ],
+    admissionCategory: [
+      { value: 'open', label: 'OPEN' },
+      { value: 'obc', label: 'OBC' },
+      { value: 'vj', label: 'VJ' },
+      { value: 'ntb', label: 'NT-B' },
+      { value: 'ntc', label: 'NT-C' },
+      { value: 'ntd', label: 'NT-D' },
+      { value: 'sbc', label: 'SBC' },
+      { value: 'st', label: 'ST' },
+      { value: 'sebc', label: 'SEBC' },
+      { value: 'ews', label: 'EWS' },
+      { value: 'sc', label: 'SC' },
+      { value: 'tfws', label: 'TFWS' },
+      { value: 'j&k', label: 'J&K' },
+      { value: 'edc', label: 'EBC' },
+      { value: 'rf', label: 'RF' },
+    ],
+    locationType: [
+      { value: 'rural', label: 'RURAL' },
+      { value: 'urban', label: 'URBAN' },
+      { value: 'semiUrban', label: 'SEMI URBAN' },
+      { value: 'metropolitan', label: 'METROPOLITAN' },
+    ],
+
+    countries: [
+      {
+        value: 'india',
+        label: 'INDIA',
+        states: [
+          {
+            value: 'maharashtra',
+            label: 'MAHARASHTRA',
+            districts: [
+              { value: 'kolhapur', label: 'KOLHAPUR' },
+              { value: 'pune', label: 'PUNE' },
+              { value: 'ahmadnagar', label: 'AHMADNAGAR' },
+              { value: 'Akola', label: 'AHMADNAGAR' },
+            ],
+          },
+          {
+            value: 'delhi',
+            label: 'DELHI',
+            districts: [
+              {
+                value: 'central delhi',
+                label: 'CENTRAL DELHI',
+              },
+              {
+                value: 'north delhi',
+                label: 'NORTH DELHI',
+              },
+              {
+                value: 'south delhi',
+                label: 'SOUTH DELHI',
+              },
+              {
+                value: 'east delhi',
+                label: 'EAST DELHI',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        value: 'australia',
+        label: 'AUSTRALIA',
+        states: [
+          {
+            value: 'new south wales',
+            label: 'NEW SOUTH WALES',
+            districts: [
+              {
+                value: 'north coast',
+                label: 'NORTH COAST',
+              },
+              {
+                value: 'central coast',
+                label: 'CENTRAL COAST',
+              },
+              {
+                value: 'victoria',
+                label: 'VICTORIA',
+              },
+              {
+                value: 'queensland',
+                label: 'QUEENSLAND',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+
+    state: [
+      { value: 'maharashtra', label: 'MAHARASHTRA' },
+      { value: 'delhi', label: 'DELHI' },
+    ],
+    district: [
+      { value: 'pune', label: 'PUNE' },
+      { value: 'ahmadnagar', label: 'AHMADNAGAR' },
+    ],
+    employeePositions: [
+      {
+        value: 'ASSISTANT HEAD OF THE DEPARTMENT',
+        label: 'ASSISTANT HEAD OF THE DEPARTMENT',
+      },
+      { value: 'ASSISTANT LIBRARIAN', label: 'ASSISTANT LIBRARIAN' },
+      { value: 'CAMPUS INCHARGE', label: 'CAMPUS INCHARGE' },
+      { value: 'rworkAdministrator', label: 'RWORK ADMINISTRATOR' },
+    ],
+    employeePositionsDepartments: [
+      { value: '', label: 'SELECT FROM DROP DOWN' },
+      { value: 'FIRST YEAR DEPARTMENT', label: 'FIRST YEAR DEPARTMENT' },
+      { value: 'CIVIL ENGINEERING', label: 'CIVIL ENGINEERING' },
+    ],
+    employeeJobHistoryUserType: [
+      { value: 'TEACHING STAFF', label: 'TEACHING STAFF' },
+    ],
+    employeeJobHistoryDesignation: [
+      { value: '', label: 'SELECT FROM DROP DOWN' },
+      { value: 'ADJUNCT PROFESSOR', label: 'ADJUNCT PROFESSOR' },
+      { value: 'ASSISTANT LIBRARIAN', label: 'ASSISTANT LIBRARIAN' },
+    ],
+    employeeJobHistoryAppointmentType: [
+      { value: '', label: 'SELECT FROM DROP DOWN' },
+      { value: 'adhoc', label: 'ADHOC' },
+      { value: 'ADJUNCT', label: 'ADJUNCT' },
+    ],
+    employeeJobHistoryAppointmentSubType: [
+      { value: 'REGULAR', label: 'REGULAR' },
+    ],
+    employeeJobHistoryParentDepartment: [
+      { value: 'FIRST YEAR DEPARTMENT', label: 'FIRST YEAR DEPARTMENT' },
+    ],
+    levelOfEducation: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'X', label: 'X' },
+      { value: 'XII', label: 'XII' },
+      { value: 'Diploma', label: 'DIPLOMA' },
+      { value: 'Vocational', label: 'VOCATIONAL' },
+      { value: 'UG', label: 'UG' },
+      { value: 'PG', label: 'PG' },
+      { value: 'PH.D', label: 'PH.D' },
+      { value: 'Post Doc', label: 'POST DOC' },
+    ],
+    graduationYear: [
+      { value: '2010', label: '2010' },
+      { value: '2011', label: '2011' },
+      { value: '2012', label: '2012' },
+      { value: '2013', label: '2013' },
+      { value: '2014', label: '2014' },
+      { value: '2015', label: '2015' },
+      { value: '2016', label: '2016' },
+      { value: '2017', label: '2017' },
+      { value: '2018', label: '2018' },
+      { value: '2019', label: '2019' },
+      { value: '2020', label: '2020' },
+    ],
+    paymentMode: [
+      { value: 'bank', label: 'Bank' },
+      { value: 'cash', label: 'Cash' },
+      { value: 'cheque', label: 'Cheque' },
+    ],
+    accountType: [
+      { value: 'savings', label: 'Savings' },
+      { value: 'current', label: 'Current' },
+    ],
+    level: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'begineer', label: 'BEGINEER' },
+      { value: 'associate', label: 'ASSOCIATE' },
+      { value: 'professional', label: 'PROFESSIONAL' },
+      { value: 'expert', label: 'EXPERT' },
+    ],
+    academicYear: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: '2020-2021', label: '2020-2021' },
+      { value: '2019-2020', label: '2019-2020' },
+      { value: '2018-2019', label: '2018-2019' },
+      { value: '2017-2018', label: '2017-2018' },
+      { value: '2016-2017', label: '2016-2017' },
+    ],
+    experienceType: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'INDUSTRY', label: 'INDUSTRY EXPERIENCE' },
+      { value: 'ENTREPRENUERSHIP', label: 'ENTREPRENUERSHIP' },
+      { value: 'RESERCH EXPERIENCE', label: 'RESERCH EXPERIENCE' },
+      { value: 'TEACHING EXPERIENCE', label: 'TEACHING EXPERIENCE' },
+      {
+        value: 'ADMINISTRATIVE/NON-TEACHING EXPERIENCE',
+        label: 'ADMINISTRATIVE/NON-TEACHING EXPERIENCE',
+      },
+    ],
+    qualityPaper: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'SCOPUS INDEXED JOURNAL', label: 'SCOPUS INDEXED JOURNAL' },
+      { value: 'SCI INDEXED JOURNAL', label: 'SCI INDEXED JOURNAL' },
+      { value: 'otherjournal', label: 'OTHER JOURNAL' },
+      {
+        value: 'SCOPUS INDEXED CONFERENCE',
+        label: 'SCOPUS INDEXED CONFERENCE',
+      },
+      { value: 'OTHER CONFERENCE', label: 'OTHER CONFERENCE' },
+    ],
+    levelOfConference: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'NATIONAL', label: 'NATIONAL' },
+      { value: 'INTERNATIONAL', label: 'INTERNATIONAL' },
+    ],
+    degreeLevel: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'PG', label: 'PG' },
+      { value: 'PHD', label: 'PHD' },
+    ],
+    completionStatus: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'inprogress', label: 'IN PROGRESS' },
+      { value: 'conpleted', label: 'COMPLETED' },
+    ],
+    typeOfActivity: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'PUBLICATION', label: 'PUBLICATION' },
+      {
+        value: 'STTP/WORKSHOP/FDTP/FDP/STC',
+        label: 'STTP/WORKSHOP/FDTP/FDP/STC',
+      },
+      { value: 'BOOK', label: 'BOOK' },
+      { value: 'PATENT', label: 'PATENT' },
+      { value: 'SPONSORED RESEARCH', label: 'SPONSORED RESEARCH' },
+      {
+        value: 'CONSULTANCY FROM INDUSTRY',
+        label: 'CONSULTANCY FROM INDUSTRY',
+      },
+      { value: 'DEVELOPMENT ACTIVITY', label: 'DEVELOPMENT ACTIVITY' },
+      { value: 'GUEST LECTURE', label: 'GUEST LECTURE' },
+      {
+        value: 'PG AND PHD STUDENTS GUIDED',
+        label: 'PG AND PHD STUDENTS GUIDED',
+      },
+      {
+        value: 'INNOVATION IN TEACHING AND LEARNING',
+        label: 'INNOVATION IN TEACHING AND LEARNING',
+      },
+      {
+        value: 'CURRICULUM DEVELOPMENT AND ASSESSMENT DETAILS',
+        label: 'CURRICULUM DEVELOPMENT AND ASSESSMENT DETAILS',
+      },
+      { value: 'EXTENSION ACTIVITY', label: 'EXTENSION ACTIVITY' },
+      { value: 'ONLINE COURSES', label: 'ONLINE COURSES' },
+      { value: 'CORPORATE TRAINING', label: 'CORPORATE TRAINING' },
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'PUBLICATION', label: 'PUBLICATION' },
+      {
+        value: 'STTP/WORKSHOP/FDTP/FDP/STC',
+        label: 'STTP/WORKSHOP/FDTP/FDP/STC',
+      },
+      { value: 'BOOK', label: 'BOOK' },
+      { value: 'PATENT', label: 'PATENT' },
+      { value: 'SPONSORED RESEARCH', label: 'SPONSORED RESEARCH' },
+      {
+        value: 'CONSULTANCY FROM INDUSTRY',
+        label: 'CONSULTANCY FROM INDUSTRY',
+      },
+      { value: 'DEVELOPMENT ACTIVITY', label: 'DEVELOPMENT ACTIVITY' },
+      { value: 'GUEST LECTURE', label: 'GUEST LECTURE' },
+      {
+        value: 'PG AND PHD STUDENTS GUIDED',
+        label: 'PG AND PHD STUDENTS GUIDED',
+      },
+      {
+        value: 'INNOVATION IN TEACHING AND LEARNING',
+        label: 'INNOVATION IN TEACHING AND LEARNING',
+      },
+      {
+        value: 'CURRICULUM DEVELOPMENT AND ASSESSMENT DETAILS',
+        label: 'CURRICULUM DEVELOPMENT AND ASSESSMENT DETAILS',
+      },
+      { value: 'EXTENSION ACTIVITY', label: 'EXTENSION ACTIVITY' },
+      { value: 'ONLINE COURSES', label: 'ONLINE COURSES' },
+      { value: 'CORPORATE TRAINING', label: 'CORPORATE TRAINING' },
+    ],
+    types: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      {
+        value:
+          'MEMBER OF ACADEMIC COUNCIL/BOS OF AFFILIATING BOARD/UNIVERSITY DETAILS',
+        label:
+          'MEMBER OF ACADEMIC COUNCIL/BOS OF AFFILIATING BOARD/UNIVERSITY DETAILS',
+      },
+      {
+        value: 'SETTING OF SEMESTER END QUESTION PAPERS DETAILS',
+        label: 'SETTING OF SEMESTER END QUESTION PAPERS DETAILS',
+      },
+      {
+        value: 'DESIGN AND DEVELOPMENT OF CURRICULUM DETAILS',
+        label: 'DESIGN AND DEVELOPMENT OF CURRICULUM DETAILS',
+      },
+      {
+        value: 'ASSESSMENT/EVALUATION/MODERATION DETAILS',
+        label: 'ASSESSMENT/EVALUATION/MODERATION DETAILS',
+      },
+    ],
+    participationType: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'withinState', label: 'WITHIN STATE' },
+      { value: 'outsideState', label: 'OUTSIDE STATE' },
+      { value: 'outsideCountry', label: 'OUTSIDE COUNTRY' },
+    ],
+    activity: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'NSS', label: 'NSS' },
+      { value: 'NCC', label: 'NCC' },
+      { value: 'RED CROSS', label: 'RED CROSS' },
+      { value: 'YRC', label: 'YRC' },
+      { value: 'SWACHH BHARAT', label: 'SWACHH BHARAT' },
+      { value: 'AIDS AWARENESS', label: 'AIDS AWARENESS' },
+      { value: 'GENDER ISSUES', label: 'GENDER ISSUES' },
+      { value: 'OTHER', label: 'OTHER' },
+    ],
+    organisinggencyYesNo: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'Yes', label: 'YES' },
+      { value: 'No', label: 'NO' },
+    ],
+    productDevelopment: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'product', label: 'PRODUCT DEVELOPMENT' },
+      { value: 'research', label: 'RESEARCH LABOROTARIES' },
+      { value: 'instructional', label: 'INSTRUCTIONAL MATERIALS' },
+      { value: 'working_models', label: 'WORKING MODELS/CHARTS/MONOGRAMS' },
+    ],
+    program: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'NA', label: 'NA' },
+      {
+        value: 'UNDER GRADUATE IN CIVIL ENGINEERING',
+        label: 'UNDER GRADUATE IN CIVIL ENGINEERING',
+      },
+      {
+        value: 'UNDER GRADUATE IN COMPUTER SCIENCE AND ENGINEERING',
+        label: 'UNDER GRADUATE IN COMPUTER SCIENCE AND ENGINEERING',
+      },
+      { value: 'ABC', label: 'ABC' },
+      { value: 'TEST1', label: 'TEST 1' },
+    ],
+    relevantPo: [{ value: 'na', label: 'NA' }],
+    organisingBody: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'other', label: 'OTHER' },
+      {
+        value: 'sveri_college',
+        label: 'SVERI\'S COLLEGE OF ENGINEERING,PANDHARPUR',
+      },
+    ],
+    employeeApplicationStatus: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'filed', label: 'FILED' },
+      { value: 'published', label: 'PUBLISHED' },
+      { value: 'granted', label: 'GRANTED' },
+    ],
+    onlineCoursesMode: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'offline', label: 'OFFLINE' },
+      { value: 'online', label: 'ONLINE' },
+    ],
+    EvaluationType: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'assessment', label: 'ASSESSMENT' },
+      { value: 'evaluation', label: 'EVALUATION' },
+      { value: 'moderation', label: 'MODERATION' },
+    ],
+    EvaluationLevelOfProgram: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'Diploma', label: 'DIPLOMA' },
+      { value: 'UG', label: 'UG' },
+      { value: 'PG', label: 'PG' },
+      { value: 'PH.D', label: 'PH.D' },
+    ],
+    employmentStatus: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'INACTIVE', label: 'INACTIVE' },
+      { value: 'RESIGNED', label: 'RESIGNED' },
+      { value: 'TERMINATED/REMOVED', label: 'TERMINATED/REMOVED' },
+      { value: 'TRANSFER', label: 'TRANSFER' },
+      { value: 'RETIRED', label: 'RETIRED' },
+    ],
+    EmploymentStatus: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'INACTIVE', label: 'INACTIVE' },
+    ],
+    EmploymentActiveStatus: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'ACTIVE', label: 'ACTIVE' },
+    ],
+
+    admissionProcess: [
+      { value: 'cap1', label: 'CAP 1', subprocess: 'government' },
+      { value: 'cap2', label: 'CAP 2', subprocess: 'government' },
+      { value: 'cap3', label: 'CAP 3', subprocess: 'government' },
+      { value: 'againstcap', label: 'Against CAP', subprocess: 'institute' },
+    ],
+    admissionSubProcess: [
+      { value: 'government', label: 'GOVERNMENT PROCESS' },
+      { value: 'institute', label: 'Institute Level' },
+    ],
+    numberType: [
+      { value: 'local', label: 'Local Guardian' },
+      { value: 'responsiblePerson', label: 'Responsible Person' },
+      { value: 'home', label: 'Home' },
+      { value: 'earnLearn', label: 'Earn Learn' },
+    ],
+    belongsTo: [
+      { value: 'self', label: 'Self' },
+      { value: 'parent', label: 'Parent' },
+      { value: 'collage', label: 'Collage' },
+      { value: 'guardian', label: 'Guardian' },
+    ],
+    coCurricularActivity: [
+      { value: 'technical_details', label: 'Technical Event ' },
+      { value: 'publication_details', label: 'Publications ' },
+      {
+        value: 'addoncertificate_details',
+        label: 'Add-On/Certificate Courses',
+      },
+      { value: 'workshop_details', label: 'Training/Workshop' },
+      {
+        value: 'industrial_training_details',
+        label: 'Industrial Training/Internship',
+      },
+    ],
+    eventLevel: [
+      { value: 'department', label: 'Department Level' },
+      { value: 'institute', label: 'Institute Level' },
+      { value: 'state', label: 'State Level' },
+      { value: 'national', label: 'National Level' },
+      { value: 'international', label: 'International Level' },
+    ],
+    eventParticipationType: [
+      { value: 'withinState', label: 'Within State' },
+      { value: 'outsideState', label: 'Outside State' },
+    ],
+    achievement: [
+      { value: 'firstPrice', label: 'First Price' },
+      { value: 'secondPrice', label: 'Second Price' },
+      { value: 'thirdPrice', label: 'Third Price' },
+      { value: 'participated', label: 'Participated' },
+    ],
+    achievementPrice: [
+      { value: 'firstPrice', label: 'First Price' },
+      { value: 'secondPrice', label: 'Second Price' },
+      { value: 'thirdPrice', label: 'Third Price' },
+    ],
+    country: [
+      { value: 'india', label: 'India' },
+      { value: 'china', label: 'China' },
+    ],
+
+    typeOfEvent: [
+      { value: 'sport', label: 'Sport' },
+      { value: 'cultural', label: 'Cultural' },
+      { value: 'extended-social-activity', label: 'Extended/Social Activity' },
+      { value: 'extension-activity', label: 'Extension Activity' },
+    ],
+    sportType: [
+      { key: 'team', value: 'Team' },
+      { key: 'individual', value: 'Individual' },
+    ],
+    division: [
+      { key: 'a', value: 'A' },
+      { key: 'b', value: 'B' },
+    ],
+    publicationType: [
+      { value: 'newsletter', label: 'Newsletter' },
+      { value: 'magzine', label: 'Magzine' },
+      { value: 'paper', label: 'Paper' },
+    ],
+    typeOfPaper: [
+      { value: 'journal', label: 'Journal' },
+      { value: 'conferenace', label: 'Conferenace' },
+    ],
+    mode: [
+      { value: 'online', label: 'Online' },
+      { value: 'offline', label: 'Offline' },
+    ],
+    typeOfExtensionActivity: [
+      { value: 'nss', label: 'NSS' },
+      { value: 'ncc', label: 'NCC' },
+      { value: 'redCross', label: 'RED CROSS' },
+      { value: 'yrc', label: 'YRC' },
+      { value: 'swatchhBharat', label: 'SWATCHH BHARAT' },
+      { value: 'aids', label: 'AIDS' },
+      { value: 'genderIssues', label: 'GENDER ISSUES' },
+      { value: 'other', label: 'Other' },
+    ],
+    dummyMultiSelectOptions: [
+      { value: 'john_doe', label: 'John Doe' },
+      { value: 'tom_doe', label: 'Tom Doe' },
+      { value: 'lazy_doe', label: 'Lazy Doe' },
+      { value: 'stacy_joe', label: 'Stacy Joe' },
+    ],
+    feeCategory: [
+      { value: 'open', label: 'OPEN' },
+      { value: 'obc', label: 'OBC' },
+      { value: 'vj', label: 'VJ' },
+      { value: 'ntb', label: 'NT-B' },
+      { value: 'ntc', label: 'NT-C' },
+      { value: 'ntd', label: 'NT-D' },
+      { value: 'sbc', label: 'SBC' },
+      { value: 'st', label: 'ST' },
+      { value: 'sebc', label: 'SEBC' },
+      { value: 'ews', label: 'EWS' },
+      { value: 'sc', label: 'SC' },
+      { value: 'tfws', label: 'TFWS' },
+      { value: 'j&k', label: 'J&K' },
+      { value: 'edc', label: 'EBC' },
+      { value: 'rf', label: 'RF' },
+    ],
+    typeOfAdmission: [
+      { value: 'cap_1', label: 'CAP 1' },
+      { value: 'cap_2', label: 'CAP 2' },
+      { value: 'cap_3', label: 'CAP 3' },
+      { value: 'institute_level', label: 'INSTITUTE LEVEL' },
+      { value: 'against_cap', label: 'AGAINST CAP' },
+      { value: 'cap_4', label: 'CAP 4' },
+      { value: 'cap_5', label: 'CAP 5' },
+      { value: 'cap_6', label: 'CAP 6' },
+      { value: 'cap', label: 'CAP' },
+      { value: 'gate', label: 'Through Gate' },
+    ],
+    admissionSubType: [
+      { value: 'within_sanctioned_intake', label: 'WITHIN SANCTIONED INTAKE' },
+      { value: 'supernumerary_admission', label: 'SUPERNUMERARY ADMISSION' },
+    ],
+    occupationOfParent: [
+      { value: 'business', label: 'BUSINESS' },
+      { value: 'employee', label: 'EMPLOYEE' },
+      { value: 'farmer', label: 'FARMER' },
+      { value: 'government_servant', label: 'GOVERNMENT SERVANT' },
+      { value: 'teacher', label: 'TEACHER' },
+      { value: 'other', label: 'OTHER' },
+    ],
+    governmentScheme: [
+      { value: '1', label: 'SASASSA' },
+      { value: '2', label: 'ABC' },
+      { value: '3', label: 'ABCV' },
+      { value: '4', label: 'EWSQ' },
+      { value: '5', label: 'DEMO' },
+      { value: '6', label: 'CCESC' },
+      { value: '7', label: 'DEMO1' },
+      { value: '8', label: 'SC' },
+      { value: '9', label: 'SCHOLARSHIP' },
+    ],
+    instituteScheme: [
+      { value: 'demo', label: 'DEMOTESTNONGOVF' },
+      { value: 'dc1', label: 'DC1' },
+      { value: 'fv', label: 'FV' },
+      { value: 'earnLearn', label: 'EARN & LEARN' },
+    ],
+    privateScheme: [
+      { value: '1', label: 'DEMOFORPRIVATE' },
+      { value: '2', label: 'AC' },
+    ],
+    hostellite: [
+      { value: 'hostellite', label: 'Hostellite' },
+      { value: 'dayscholar', label: 'Dayscholar' },
+    ],
+    sem1Status: [
+      { value: 'pass', label: 'Pass' },
+      { value: 'atkt', label: 'ATKT' },
+      { value: 'fail', label: 'Fail' },
+      { value: 'term_detention', label: 'Term Detention' },
+      { value: 'form_not_filled', label: 'Exam form not filled' },
+    ],
+    sem2Status: [
+      { value: 'result_reserved', label: 'Result Reserved' },
+      { value: 'pass', label: 'Pass' },
+      { value: 'atkt', label: 'ATKT' },
+      { value: 'fail', label: 'Fail' },
+      { value: 'term_detention', label: 'Term Detention' },
+      { value: 'form_not_filled', label: 'Exam form not filled' },
+      { value: 'form_not_allowed', label: 'Exam form not allowed' },
+    ],
+    toolType: [
+      { value: 'internal', label: 'Internal Tool' },
+      { value: 'external', label: 'External Tool' },
+    ],
+
+    toolDependency: [
+      { value: 'independent', label: 'Independent Tool' },
+      { value: 'dependent', label: 'Dependent Tool' },
+    ],
+
+    toolAssessment: [
+      { value: 'question_wise', label: 'QUESTION WISE ASSESSMENT' },
+      { value: 'assignment', label: 'ASSIGNMENT ASSESSMENT' },
+      { value: 'experiments', label: 'EXPERIMENTS ASSESSMENT' },
+      { value: 'tutorial', label: 'TUTORIAL ASSESSMENT' },
+      { value: 'rubrics', label: 'RUBRICS BASED ASSESSMENT (RUBRICS WISE CO)' },
+      { value: 'lab_test', label: 'LAB TEST ASSESSMENT' },
+      {
+        value: 'direct',
+        label: 'DIRECT ASSESSMENT (UNIVERSITY MARKS BASED ASSESSMENT)',
+      },
+      {
+        value: 'rubrics_project',
+        label: 'RUBRICS BASED ASSESSMENT (PROJECT WISE CO)',
+      },
+    ],
+    batchoptions: [
+      { value: '1', label: '1' },
+      { value: '2', label: '2' },
+      { value: '3', label: '3' },
+      { value: '4', label: '4' },
+      { value: '5', label: '5' },
+    ],
+    semester: [
+      { value: '1', label: 'Semester I' },
+      { value: '2', label: 'Semester II' },
+    ],
+
+    typesOfCourses: [
+      { value: 'university', label: 'University Level' },
+      { value: 'institute', label: 'Institute Level' },
+    ],
+
+    curriculumComponent: [
+      {
+        value: '1',
+        label: 'HUMANITIES AND SOCIAL SCIENCE',
+      },
+      {
+        value: '2',
+        label: 'BASIC SCIENCE',
+      },
+      {
+        value: '3',
+        label: 'MATHEMATICS',
+      },
+      {
+        value: '4',
+        label: 'ENGINEERING SKILLS',
+      },
+      {
+        value: '5',
+        label: 'PROFESSIONAL LABS',
+      },
+      {
+        value: '6',
+        label: 'PROFESSIONAL CORE',
+      },
+      {
+        value: '7',
+        label: 'ELECTIVES',
+      },
+      {
+        value: '8',
+        label: 'MINOR INCLUDING MANAGEMENT',
+      },
+      {
+        value: '9',
+        label: 'INDUSTRIAL TRAINING',
+      },
+      {
+        value: '10',
+        label: 'BASIC ENGINEERING',
+      },
+      {
+        value: '11',
+        label: 'PROJECTS',
+      },
+    ],
+
+    employeeType: [
+      { value: 'non_teaching_staff', label: 'NON-TEACHING STAFF' },
+      { value: 'teaching_staff', label: 'TEACHING STAFF' },
+    ],
+
+    designation: [
+      { value: 'adjunct_professor', label: 'ADJUNCT PROFESSOR' },
+      { value: 'assistant_professor', label: 'ASSISTANT PROFESSOR' },
+      { value: 'assistant_librarian', label: 'ASSISTANT LIBRARIAN' },
+      { value: 'associate_professor', label: 'ASSOCIATE PROFESSOR' },
+      { value: 'driver', label: 'DRIVER' },
+      { value: 'electrician', label: 'ELECTRICIAN' },
+      { value: 'i/c_principal', label: 'I/C PRINCIPAL' },
+      { value: 'jr_assistant_librarian', label: 'JR. ASSISTANT LIBRARIAN' },
+      { value: 'jr_clerk', label: 'JR. CLERK' },
+      { value: 'lab_assistant', label: 'LAB ASSISTANT' },
+      { value: 'lab_attendent', label: 'LAB ATTENDANT' },
+      { value: 'lecturer', label: 'LECTURER' },
+      { value: 'librarian', label: 'LIBRARIAN' },
+      { value: 'library_assistant', label: 'LIBRARY ASSISTANT' },
+      { value: 'library_attendant', label: 'LIBRARY ATTENDANT' },
+      { value: 'office_suprintendent', label: 'OFFICE SUPRINTENDENT' },
+      { value: 'peon', label: 'PEON' },
+      { value: 'principal', label: 'PRINCIPAL' },
+      { value: 'professor', label: 'PROFESSOR' },
+      { value: 'register', label: 'REGISTAR' },
+    ],
+
+    appointmentType: [
+      { value: 'temporary', label: 'TEMPORARY' },
+      { value: 'adhoc', label: 'ADHOC' },
+      { value: 'clock_hour_basis', label: 'CLOCK HOUR BASIS (CHB)' },
+      { value: 'approved_probation', label: 'APPROVED (PROBATION)' },
+      { value: 'approved_probation', label: 'APPROVED (PROBATION)' },
+      { value: 'approved_permanent', label: 'APPROVED (PERMANENT)' },
+      { value: 'approved_temporary', label: 'APPROVED (TEMPORARY)' },
+      { value: 'adjunct', label: 'ADJUNCT' },
+      { value: 'contractual', label: 'CONTRACTUAL' },
+    ],
+
+    appointmentSubtype: [
+      { value: 'regular_stipendiary', label: 'REGULAR STIPENDIARY' },
+      { value: 'regular', label: 'REGULAR' },
+      { value: 'contractual', label: 'CONTRACTUAL' },
+    ],
+    bluNodeCoordinatorCategory: [
+      { value: 'overall_coordinator', label: ' Overall Coordinator' },
+      { value: 'engineering', label: 'Engineering' },
+      { value: 'pharmacy', label: 'Pharmacy' },
+      { value: 'management', label: 'Management' },
+      { value: 'computer_application', label: 'Computer Applications' },
+    ],
+    courseMethdCredits: [
+      {
+        method: 'thoery',
+        hoursPerWeek: '3',
+        credits: '2',
+      },
+      {
+        method: 'thoery',
+        hoursPerWeek: '3',
+        credits: '2',
+      },
+      {
+        method: 'tutorial',
+        hoursPerWeek: '2',
+        credits: '2',
+      },
+      {
+        method: 'project/work/seminar',
+        hoursPerWeek: '3',
+        credits: '2',
+      },
+      {
+        method: 'industrial trainig/internship',
+        hoursPerWeek: '3',
+        credits: '2',
+      },
+      {
+        method: 'self learning',
+        hoursPerWeek: '3',
+        credits: '2',
+      },
+      // TUTORIAL
+      //   PROJECT/WORK/SEMINAR
+      //   INDUSTRIAL TRAINING/INTERNSHIP
+      //   SELF LEARNING
+    ],
+    toolTypes: [
+      {
+        value: 'thoery',
+        label: 'thoery',
+
+      },
+      {
+        value: 'practical',
+        label: 'practical',
+      },
+      {
+        value: 'tutorial',
+        label: 'tutorial',
+      },
+      {
+        value: 'project_work_seminar',
+        label: 'project/work/seminar',
+      },
+      {
+        value: 'industrial_trainig_internship',
+        label: 'industrial trainig/internship',
+      },
+      {
+        value: 'self_learning',
+        label: 'self learning',
+      },
+
+    ],
+    fundingAgencyType: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'government', label: 'GOVERNMENT' },
+      { value: 'nongovernment', label: 'NON-GOVERNMENT' },
+    ],
+    trimester: [
+      { value: '1', label: 'Term I' },
+      { value: '2', label: 'Term II' },
+      { value: '3', label: 'Term III' },
+    ],
+    facultyDropdownOptions: [
+      { value: 'SELECT FROM DROPDOWN', label: 'SELECT FROM DROPDOWN' },
+      { value: 'entiredivision', label: 'ENTIRE DIVISION' },
+      { value: 'batchwise', label: 'BATCHWISE' },
+    ],
+    targetOptions: [
+      { value: 'NA', label: 'NA' },
+      { value: '1', label: '1' },
+      { value: '2', label: '2' },
+      { value: '3', label: '3' },
+    ],
+    weekoff: [
+      { value: 'sunday', label: 'Sunday' },
+      { value: 'monday', label: 'Monday' },
+      { value: 'tuesday', label: 'Tuesday' },
+      { value: 'wednesday', label: 'Wednesday' },
+      { value: 'thursday', label: 'Thursday' },
+      { value: 'friday', label: 'Friday' },
+      { value: 'saturday', label: 'Saturday' },
+    ],
+    reservedCategory: [
+      { id: 1, categoryName: 'OPEN' },
+      { id: 2, categoryName: 'OBC' },
+      { id: 3, categoryName: 'VJ' },
+      { id: 4, categoryName: 'NT-B' },
+      { id: 5, categoryName: 'NT-C' },
+      { id: 6, categoryName: 'NT-D' },
+      { id: 7, categoryName: 'SBC' },
+      { id: 8, categoryName: 'ST' },
+      { id: 9, categoryName: 'SEBC' },
+      { id: 10, categoryName: 'EWS' },
+      { id: 11, categoryName: 'SC' },
+      { id: 12, categoryName: 'SC' },
+      { id: 13, categoryName: 'NN654644464VB@' },
+      { id: 14, categoryName: 'OPEEN' },
+    ],
+
+    book_type: [
+      { value: 'regular', label: 'Regular' },
+      { value: 'bookbank', label: 'Book Bank' },
+      { value: 'socialwelfare', label: 'Social Welfare' },
+      { value: 'competative', lablel: 'Competative Examination' }],
+    source: [
+      { value: 'purchase', label: 'Purchase' },
+      { value: 'donation', label: 'Donation' },
+      { value: 'transfer', label: 'Transfer' },
+    ],
+
+    examDetails: [
+      {
+        id: 'net',
+        exam_name: 'NET',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'slet',
+        exam_name: 'SLET',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'gate',
+        exam_name: 'GATE',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'gmat',
+        exam_name: 'GMAT',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'cat',
+        exam_name: 'CAT',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'gre',
+        exam_name: 'GRE',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'jam',
+        exam_name: 'JAM',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'ielts',
+        exam_name: 'IELTS',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'toefl',
+        exam_name: 'TOEFL',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'civilservices',
+        exam_name: 'Civil Services',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'stategovexam',
+        exam_name: 'State government examinations',
+        from_year: 97,
+        to_year: null,
+      },
+      {
+        id: 'other',
+        exam_name: 'Other examinations conducted by the State / Central Government Agencies (Specify)',
+        from_year: 97,
+        to_year: null,
+      },
+    ],
+  })),
+);

@@ -1,0 +1,24 @@
+{
+  "name": "@yh/new-ui",
+  "description": "new ui",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -rf node_modules **/node_modules && npm i -ci",
+    "dev:clean": "rm -rf node_modules **/node_modules package-lock.json **/package-lock.json && npm i",
+    "dev": "npm run -w @yh/web-ui dev",
+    "build": "npm run -w @yh/web-ui build",
+    "preview": "npm run -w @yh/web-ui preview"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.5",
+    "eslint": "^8.39.0",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">= 16.17.0"
+  },
+  "workspaces": [
+    "web-ui"
+  ]
+}
